@@ -7,3 +7,5 @@ Popping the Question is a trivia game where you have to pop balloons and answer 
 See the images below for a look into the game!
 
 ![Test Image 1](TriviaGameScreensnip.png)
+
+![Test Image 1](TriviaGameQuestion.png)
