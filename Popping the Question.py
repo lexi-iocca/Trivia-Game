@@ -1,14 +1,8 @@
 """
-FINAL PROJECT
 Popping the Question: Trivia Game
 Popping the Question.py
-Demonstrates pygame, collisions,
-labels, buttons, sprites, classes,
-for loops, and sound
 Lexi Iocca
 Date: January 17, 2018
-ICS3U - Computer Science
-Mr. Mcclinchey
 """
 # Import and Initialize
 
@@ -30,7 +24,6 @@ backtrack = pygame.mixer.Sound("backtrack.ogg")
 screen = pygame.display.set_mode((1000, 800))  # sets the size of the screen
 score = 0  # set the score to 0
 
-
 class Pin(pygame.sprite.Sprite):  # making the sprite - assigning an image to it
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -39,7 +32,6 @@ class Pin(pygame.sprite.Sprite):  # making the sprite - assigning an image to it
 
     def update(self):
         self.rect.center = pygame.mouse.get_pos()
-
 
 class Cloud(pygame.sprite.Sprite):
     def __init__(self):
@@ -57,7 +49,6 @@ class Cloud(pygame.sprite.Sprite):
         self.rect.centerx -= self.dx
         if self.rect.bottom > screen.get_width():
             self.rect.top = 0
-
 
 class Balloon1(pygame.sprite.Sprite):
     def __init__(self):
@@ -77,7 +68,6 @@ class Balloon1(pygame.sprite.Sprite):
             # up at the bottom again
             self.rect.top = 800
 
-
 class Balloon2(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -94,7 +84,6 @@ class Balloon2(pygame.sprite.Sprite):
         self.rect.centerx -= self.dx
         if self.rect.bottom < 0:
             self.rect.top = 800
-
 
 class Balloon3(pygame.sprite.Sprite):
     def __init__(self):
@@ -113,7 +102,6 @@ class Balloon3(pygame.sprite.Sprite):
         if self.rect.bottom < 0:
             self.rect.top = 800
 
-
 class Balloon4(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -130,7 +118,6 @@ class Balloon4(pygame.sprite.Sprite):
         self.rect.centerx -= self.dx
         if self.rect.bottom < 0:
             self.rect.top = 800
-
 
 class Balloon5(pygame.sprite.Sprite):
     def __init__(self):
@@ -149,7 +136,6 @@ class Balloon5(pygame.sprite.Sprite):
         if self.rect.bottom < 0:
             self.rect.top = 800
 
-
 class Plainballoon(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -166,7 +152,6 @@ class Plainballoon(pygame.sprite.Sprite):
         self.rect.centerx -= self.dx
         if self.rect.bottom < 0:
             self.rect.top = 800
-
 
 class finBalloon(pygame.sprite.Sprite):
     def __init__(self):
@@ -185,7 +170,6 @@ class finBalloon(pygame.sprite.Sprite):
         if self.rect.bottom < 0:
             self.rect.top = 800
 
-
 class Strike1(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -194,7 +178,6 @@ class Strike1(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = 980
         self.rect.centery = 780
-
 
 class Strike2(pygame.sprite.Sprite):
     def __init__(self):
@@ -205,7 +188,6 @@ class Strike2(pygame.sprite.Sprite):
         self.rect.centerx = 935
         self.rect.centery = 780
 
-
 class Strike3(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
@@ -214,7 +196,6 @@ class Strike3(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = 890
         self.rect.centery = 780
-
 
 class Button(pygame.sprite.Sprite):
     """Label Class (simplest version
@@ -263,7 +244,6 @@ class Button(pygame.sprite.Sprite):
             return True
         else:
             return False
-
 
 class Label(pygame.sprite.Sprite):
     def __init__(self):
